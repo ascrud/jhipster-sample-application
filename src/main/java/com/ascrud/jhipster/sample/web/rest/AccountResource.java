@@ -11,7 +11,7 @@ import com.ascrud.jhipster.sample.web.rest.errors.EmailAlreadyUsedException;
 import com.ascrud.jhipster.sample.web.rest.errors.InvalidPasswordException;
 import com.ascrud.jhipster.sample.web.rest.errors.LoginAlreadyUsedException;
 import com.ascrud.jhipster.sample.web.rest.vm.KeyAndPasswordVM;
-import com.mycompany.myapp.web.rest.errors.*;
+import com.ascrud.jhipster.sample.web.rest.errors.*;
 import com.ascrud.jhipster.sample.web.rest.vm.ManagedUserVM;
 import java.util.*;
 import javax.servlet.http.HttpServletRequest;

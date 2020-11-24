@@ -6,8 +6,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 import com.ascrud.jhipster.sample.JhipsterSampleApplicationApp;
 import com.ascrud.jhipster.sample.repository.timezone.DateTimeWrapper;
 import com.ascrud.jhipster.sample.repository.timezone.DateTimeWrapperRepository;
+
 import java.time.*;
 import java.time.format.DateTimeFormatter;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +24,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @SpringBootTest(classes = JhipsterSampleApplicationApp.class)
 public class HibernateTimeZoneIT {
+
     @Autowired
     private DateTimeWrapperRepository dateTimeWrapperRepository;
 
@@ -40,12 +43,12 @@ public class HibernateTimeZoneIT {
     public void setup() {
         dateTimeWrapper = new DateTimeWrapper();
         dateTimeWrapper.setInstant(Instant.parse("2014-11-12T05:50:00.0Z"));
-        dateTimeWrapper.setLocalDateTime(LocalDateTime.parse("2014-11-12T07:50:00.0"));
-        dateTimeWrapper.setOffsetDateTime(OffsetDateTime.parse("2011-12-14T08:30:00.0Z"));
         dateTimeWrapper.setZonedDateTime(ZonedDateTime.parse("2011-12-14T08:30:00.0Z"));
-        dateTimeWrapper.setLocalTime(LocalTime.parse("14:30:00"));
         dateTimeWrapper.setOffsetTime(OffsetTime.parse("14:30:00+02:00"));
+        dateTimeWrapper.setOffsetDateTime(OffsetDateTime.parse("2011-12-14T08:30:00.0Z"));
         dateTimeWrapper.setLocalDate(LocalDate.parse("2016-09-10"));
+        dateTimeWrapper.setLocalDateTime(LocalDateTime.parse("2014-11-12T07:50:00.0"));
+        dateTimeWrapper.setLocalTime(LocalTime.parse("14:30:00"));
 
         dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.S").withZone(ZoneId.of(zoneId));
 

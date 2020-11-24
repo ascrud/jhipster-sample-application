@@ -3,7 +3,7 @@
     "applicationType": "monolith",
     "gitCompany": "",
     "baseName": "jhipsterSampleApplication",
-    "packageName": "com.mycompany.myapp",
+    "packageName": "com.ascrud.jhipster.sample",
     "packageFolder": "com/mycompany/myapp",
     "serverPort": 8080,
     "serviceDiscoveryType": false,

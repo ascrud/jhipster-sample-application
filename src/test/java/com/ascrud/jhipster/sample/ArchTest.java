@@ -13,16 +13,16 @@ class ArchTest {
     void servicesAndRepositoriesShouldNotDependOnWebLayer() {
         JavaClasses importedClasses = new ClassFileImporter()
             .withImportOption(ImportOption.Predefined.DO_NOT_INCLUDE_TESTS)
-            .importPackages("com.mycompany.myapp");
+            .importPackages("com.ascrud.jhipster.sample");
 
         noClasses()
             .that()
-            .resideInAnyPackage("com.mycompany.myapp.service..")
+            .resideInAnyPackage("com.ascrud.jhipster.sample.service..")
             .or()
-            .resideInAnyPackage("com.mycompany.myapp.repository..")
+            .resideInAnyPackage("com.ascrud.jhipster.sample.repository..")
             .should()
             .dependOnClassesThat()
-            .resideInAnyPackage("..com.mycompany.myapp.web..")
+            .resideInAnyPackage("..com.ascrud.jhipster.sample.web..")
             .because("Services and repositories should not depend on web layer")
             .check(importedClasses);
     }

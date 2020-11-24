@@ -17,20 +17,20 @@ public class DateTimeWrapper implements Serializable {
     @Column(name = "instant")
     private Instant instant;
 
-    @Column(name = "local_date_time")
-    private LocalDateTime localDateTime;
+    @Column(name = "zoned_date_time")
+    private ZonedDateTime zonedDateTime;
 
     @Column(name = "offset_date_time")
     private OffsetDateTime offsetDateTime;
 
-    @Column(name = "zoned_date_time")
-    private ZonedDateTime zonedDateTime;
+    @Column(name = "offset_time")
+    private OffsetTime offsetTime;
+
+    @Column(name = "local_date_time")
+    private LocalDateTime localDateTime;
 
     @Column(name = "local_time")
     private LocalTime localTime;
-
-    @Column(name = "offset_time")
-    private OffsetTime offsetTime;
 
     @Column(name = "local_date")
     private LocalDate localDate;

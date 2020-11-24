@@ -8,6 +8,7 @@ import com.ascrud.jhipster.sample.repository.UserRepository;
 import com.ascrud.jhipster.sample.JhipsterSampleApplicationApp;
 
 import java.util.Locale;
+
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
